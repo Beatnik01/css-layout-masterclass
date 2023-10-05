@@ -1,0 +1,37 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+.father {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 100vh;
+}
+
+.box {
+  height: 500px;
+  color: white;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:first-child {
+  background-color: tomato;
+  flex-grow: 1;
+}
+
+.box:nth-child(2) {
+  background-color: teal;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.box:last-child {
+  background-color: orange;
+  flex-grow: 1;
+}
