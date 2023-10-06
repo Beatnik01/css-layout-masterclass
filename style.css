@@ -4,34 +4,31 @@ html body {
 }
 
 .father {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: [one] 100px [two] 200px [three] 100px [four];
+  grid-template-rows: [one] 200px [two] 100px [three];
+  gap: 10px;
 }
 
-.box {
-  height: 500px;
-  color: white;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.box:first-child {
+.child {
   background-color: tomato;
-  flex-grow: 1;
+  display: flex;
+  color: white;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
 }
 
-.box:nth-child(2) {
-  background-color: teal;
-  flex-grow: 1;
-  flex-shrink: 0;
+.child:last-child {
+  background-color: turquoise;
+  /* grid-column-start: 2;
+  grid-column-end: -1; */
+  grid-column: 2 / -1;
 }
 
-.box:last-child {
-  background-color: orange;
-  flex-grow: 1;
+.child:first-child {
+  background-color: turquoise;
+  /* grid-row-start: 1;
+  grid-row-end: -1; */
+  grid-row: 1 / -1;
 }
