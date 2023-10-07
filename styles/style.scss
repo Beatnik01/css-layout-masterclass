@@ -1,43 +1,18 @@
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1200px;
+@import "./reset.scss";
 
-@mixin smallDevice {
-  @media screen and (min-width: $breakpoint-sm) {
-    @content;
-  }
-}
-
-@mixin mediumDevice {
-  @media screen and (min-width: $breakpoint-md) {
-    @content;
-  }
-}
-
-@mixin largeDevice {
-  @media screen and (min-width: $breakpoint-lg) {
-    @content;
-  }
-}
-
-@mixin xlargeDevice {
-  @media screen and (min-width: $breakpoint-xl) {
-    @content;
-  }
-}
-
-body {
-  @include smallDevice {
-    background-color: blue;
-  }
-  @include mediumDevice {
-    background-color: red;
-  }
-  @include largeDevice {
-    background-color: purple;
-  }
-  @include xlargeDevice {
-    background-color: pink;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0px;
+  a {
+    background-color: black;
+    opacity: 0.9;
+    padding: 20px 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
   }
 }
