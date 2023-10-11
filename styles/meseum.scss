@@ -1,0 +1,117 @@
+.top {
+  margin-bottom: 300px;
+}
+
+.wrapper {
+  gap: 2px;
+  display: grid;
+  grid-template-columns: 5fr repeat(4, 20fr);
+  grid-template-rows: 5fr 10fr 30fr 25fr;
+  width: 90%;
+  height: 50vh;
+  border: 5px solid black;
+  margin: 0 auto;
+  background-color: black;
+  div {
+    background-color: white;
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    span {
+      &:first-child {
+        padding: 0px 20px;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      &:last-child {
+        padding: 0px 30px;
+        font-size: 13px;
+        line-height: 15px;
+        color: rgba($color: #000000, $alpha: 0.6);
+      }
+    }
+  }
+  .img {
+    background-image: url("https://source.unsplash.com/random");
+    background-size: cover;
+  }
+  .logo {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: bold;
+    grid-column: 3/6;
+    padding: 20px;
+  }
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    span {
+      &:first-child {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &:last-child {
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+  .side {
+    grid-row: 3/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+  }
+  .large {
+    grid-column: 2/5;
+    span {
+      &:first-child {
+        font-size: 150px;
+      }
+    }
+  }
+  .frame {
+    background-color: #c7c2cb;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      width: 80%;
+      height: 80%;
+      gap: 30px;
+      border: 2px solid black;
+      span {
+        &:first-child {
+          font-size: 35px;
+          text-align: center;
+        }
+        &:last-child {
+          text-decoration: underline;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
